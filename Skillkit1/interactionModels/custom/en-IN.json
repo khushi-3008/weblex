@@ -1,0 +1,105 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "dog pictures",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "ShowDogPictureIntent",
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{number}"
+              ]
+            }
+          ],
+          "samples": [
+            "image {number}",
+            "dog {number}",
+            "show me dog {number}",
+            "dog number {number}"
+          ]
+        },
+        {
+          "name": "ShowAllDogPicturesIntent",
+          "slots": [],
+          "samples": [
+            "show me all pictures",
+            "all pictures",
+            "all dogs",
+            "show me all dogs"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "ShowDogPictureIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.14391497566.1450867638000"
+              }
+            }
+          ],
+          "delegationStrategy": "ALWAYS"
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.14391497566.1450867638000",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please specify the number"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "6"
+}
