@@ -1,7 +1,7 @@
 #image_container {
     width: 800px;
     height: 600px;
-    float: left;
+    margin: auto;
 }
 
 .image_in_grid {
