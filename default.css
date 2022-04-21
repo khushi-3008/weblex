@@ -11,6 +11,11 @@
     float: left;
 }
 
+.single {
+    width: 800px;
+    height: 600px;
+}
+
 .image_in_grid img {
     width: 100%;
 }
